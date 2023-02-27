@@ -1,6 +1,6 @@
 package com.azamovhudstc.foodapprecoginizng.usecases.imp
 
-import com.azamovhudstc.buisnessapp.repo.AppRepository
+import com.azamovhudstc.foodapprecoginizng.repo.AppRepository
 import com.azamovhudstc.buisnessapp.usecases.MainScreenUseCase
 import com.azamovhudstc.foodapprecoginizng.models.ProductFireBase
 import kotlinx.coroutines.flow.Flow
