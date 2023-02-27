@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
-import com.azamovhudstc.buisnessapp.ui.adapters.MainAdapter
+import com.azamovhudstc.foodapprecoginizng.presentation.screen.home.adapters.MainAdapter
 import com.azamovhudstc.buisnessapp.vm.MainScreenViewModel
 import com.azamovhudstc.foodapprecoginizng.R
 import com.azamovhudstc.foodapprecoginizng.vm.imp.MainScreenViewModelImp

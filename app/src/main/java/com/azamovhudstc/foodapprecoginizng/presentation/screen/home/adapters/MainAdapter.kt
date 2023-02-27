@@ -1,4 +1,4 @@
-package com.azamovhudstc.buisnessapp.ui.adapters
+package com.azamovhudstc.foodapprecoginizng.presentation.screen.home.adapters
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,7 +9,6 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.azamovhudstc.foodapprecoginizng.R
 import com.azamovhudstc.foodapprecoginizng.models.ProductFireBase
-import com.bumptech.glide.Glide
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.list_item.view.*
 

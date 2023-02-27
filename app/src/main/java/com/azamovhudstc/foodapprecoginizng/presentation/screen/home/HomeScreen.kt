@@ -6,12 +6,11 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
+
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
@@ -19,7 +18,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
-import com.azamovhudstc.foodapprecoginizng.BuildConfig
+import com.azamovhudstc.foodapprecoginizng.utils.BuildConfigs as BuildConfig
 import com.azamovhudstc.foodapprecoginizng.R
 import com.azamovhudstc.foodapprecoginizng.data.local.sharedpref.AppReference
 import com.azamovhudstc.foodapprecoginizng.presentation.viewmodel.home.HomeViewModel
@@ -106,7 +105,7 @@ class HomeScreen : Fragment(R.layout.screen_home) {
             when(it.itemId){
                 R.id.rate_us ->{
                     val url =
-                        "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID.toString()}"
+                        "https://play.google.com/store/apps/details?id=${com.azamovhudstc.foodapprecoginizng.BuildConfig.APPLICATION_ID.toString()}"
                     val i = Intent(Intent.ACTION_VIEW)
                     i.data = Uri.parse(url)
                     startActivity(i)
@@ -117,7 +116,7 @@ class HomeScreen : Fragment(R.layout.screen_home) {
                     val sharingIntent = Intent(Intent.ACTION_SEND)
                     sharingIntent.type = "text/plain"
                     val shareBody = "Dictionary App Sharing With"
-                    val shareSubject = "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID.toString()}"
+                    val shareSubject = "https://play.google.com/store/apps/details?id=${com.azamovhudstc.foodapprecoginizng.BuildConfig.APPLICATION_ID.toString()}"
                     sharingIntent.putExtra(Intent.EXTRA_TEXT, shareSubject)
                     sharingIntent.putExtra(Intent.EXTRA_SUBJECT, shareSubject)
                     startActivity(Intent.createChooser(sharingIntent, "Share using"))
