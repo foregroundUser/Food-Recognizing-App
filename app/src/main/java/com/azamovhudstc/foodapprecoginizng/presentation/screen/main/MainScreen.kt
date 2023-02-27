@@ -45,19 +45,10 @@ class MainScreen : Fragment(R.layout.main_screen) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val string = arguments?.getString("type")
-        setUpSpinner()
         println("asasdas $string")
 
         viewModel.getBlindsByCollectionType(type = string!!, filter  ="")
         rv_products.adapter=adapter
     }
 
-    private fun setUpSpinner() {
-
-        powerSpinner.setOnSpinnerItemSelectedListener<String> { oldIndex, oldItem, newIndex, newText ->
-//            toast("$text selected!")
-//            showSnackbar("")
-        }
-
-    }
 }
