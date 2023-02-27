@@ -2,22 +2,27 @@ package com.azamovhudstc.foodapprecoginizng.repo.imp
 
 import android.os.Build
 import androidx.annotation.RequiresApi
+import com.azamovhudstc.buisnessapp.repo.AppRepository
+import com.azamovhudstc.foodapprecoginizng.data.remote.api.EdamanApi
 import com.azamovhudstc.foodapprecoginizng.data.remote.response.ProductResponse
 import com.azamovhudstc.foodapprecoginizng.models.ProductFireBase
-import com.azamovhudstc.foodapprecoginizng.repo.AppRepository
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
+import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 import kotlin.collections.ArrayList
 
-class AppRepositoryImp @Inject constructor(private val firebaseFireStore: FirebaseFirestore) :
+class AppRepositoryImp @Inject constructor(private val firebaseFireStore: FirebaseFirestore,private val edamanApi: EdamanApi) :
     AppRepository {
-    override fun searchByQueryFoods(query: String): Flow<Result<ProductResponse>> {
-
+    override fun searchByQueryFoods(query: String): Flow<Result<ProductResponse>> = flow{
+        val queryByFoods = edamanApi.queryByFoods(ingr = query)
+        if (queryByFoods.isSuccessful) {
+            emit(Result.success(queryByFoods.body()!!))
+        }
     }
 
     @RequiresApi(Build.VERSION_CODES.O)
