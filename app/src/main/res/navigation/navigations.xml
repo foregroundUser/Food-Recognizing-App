@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigations"
+    app:startDestination="@id/homeScreen">
+
+    <fragment
+        android:id="@+id/homeScreen"
+        android:name="com.azamovhudstc.foodapprecoginizng.presentation.screen.home.HomeScreen"
+        android:label="screen_home"
+        tools:layout="@layout/screen_home" >
+        <action
+            android:id="@+id/action_homeScreen_to_mainScreen"
+            app:destination="@id/mainScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainScreen"
+        tools:layout="@layout/main_screen"
+        android:name="com.azamovhudstc.foodapprecoginizng.presentation.screen.main.MainScreen"
+        android:label="MainScreen" />
+</navigation>

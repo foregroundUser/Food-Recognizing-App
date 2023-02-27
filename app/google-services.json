@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "433258724367",
+    "project_id": "food-recoginizing-app",
+    "storage_bucket": "food-recoginizing-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:433258724367:android:e51c1f4ecd92dd283b377a",
+        "android_client_info": {
+          "package_name": "com.azamovhudstc.foodapprecoginizng"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "433258724367-j591ujmn13vsusgjpf3nfntifeelu35j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7xctOiH2cKcr3GWHCPl_Tf5Wq2KMuWnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "433258724367-j591ujmn13vsusgjpf3nfntifeelu35j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
