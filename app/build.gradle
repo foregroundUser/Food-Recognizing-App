@@ -74,6 +74,8 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'//Retrofit2
     implementation 'de.hdodenhof:circleimageview:3.1.0'//CircleImageView
     implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.3")//Okhttp3
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
     def room_version = "2.3.0"
     //noinspection GradleDependency
