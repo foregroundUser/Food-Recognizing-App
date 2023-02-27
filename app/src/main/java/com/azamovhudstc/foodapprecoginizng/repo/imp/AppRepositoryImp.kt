@@ -1,8 +1,9 @@
-package com.azamovhudstc.buisnessapp.repo.imp
+package com.azamovhudstc.foodapprecoginizng.repo.imp
 
 import android.os.Build
 import androidx.annotation.RequiresApi
-import com.azamovhudstc.foodapprecoginizng.repo.AppRepository
+import com.azamovhudstc.buisnessapp.repo.AppRepository
+import com.azamovhudstc.foodapprecoginizng.data.remote.response.ProductResponse
 import com.azamovhudstc.foodapprecoginizng.models.ProductFireBase
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.coroutines.Dispatchers
@@ -15,6 +16,10 @@ import kotlin.collections.ArrayList
 
 class AppRepositoryImp @Inject constructor(private val firebaseFireStore: FirebaseFirestore) :
     AppRepository {
+    override fun searchByQueryFoods(query: String): Flow<Result<ProductResponse>> {
+
+    }
+
     @RequiresApi(Build.VERSION_CODES.O)
 
     override fun getAllFoodsByeType(type:String): Flow<Result<ArrayList<ProductFireBase>>> =callbackFlow   <Result<ArrayList<ProductFireBase>>> {
